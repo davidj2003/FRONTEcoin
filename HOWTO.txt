@@ -1,0 +1,27 @@
+Getting started
+Use the following instructions to mine a block.
+
+Open your wallet, and make sure your wallet is connected with a node.
+Your wallet is connected when you see the icon Wallet connections in the lower corner of your wallet.
+
+The message “Synchronizing with network...” will disappear once you mine your first block.
+
+Close your wallet and create the file frontecoin.conf in the folder “%APPDATA%\frontecoin\”.
+
+Paste the following text into frontecoin.conf and save the file.
+rpcuser=rpc_frontecoin
+rpcpassword=0abcdf5921f81b6701c250f3b
+rpcallowip=127.0.0.1
+rpcport=24975
+listen=1
+server=1
+
+download cpuminer from the repo and the extract the zip file
+Create a .bat file named mine.bat and paste the following text into mine.bat.
+
+minerd --url=http://127.0.0.1:24975 --userpass=rpc_frontecoin:0abcdf5921f81b6701c250f3b
+
+Save the file inside the extracted cpuminer folder.
+
+Open your wallet and execute mine.bat to start mining your first block.
+
